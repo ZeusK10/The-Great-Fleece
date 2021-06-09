@@ -10,6 +10,11 @@ public class Player : MonoBehaviour
     RaycastHit hitInfo;
     Ray rayOrigin;
     float dist;
+    [SerializeField]
+    private GameObject coinPrefab;
+    [SerializeField]
+    AudioClip coinAudio;
+    private bool coinDropped;
 
     void Start()
     {
@@ -29,10 +34,40 @@ public class Player : MonoBehaviour
                 _animator.SetBool("Walk", true);
             }
         }
+
         dist = Vector3.Distance(hitInfo.point, transform.position); 
         if (dist<1)
         {
             _animator.SetBool("Walk", false);
+        }
+
+        if(coinDropped==false)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(rayOrigin, out hit))
+                {
+                    _animator.SetTrigger("Throw");
+                    coinDropped = true;
+                    Instantiate(coinPrefab, hit.point, Quaternion.identity);
+                    AudioSource.PlayClipAtPoint(coinAudio, transform.position);
+                    CoinTossed(hit.point);
+                }
+                
+            }
+        }
+        
+    }
+
+    void CoinTossed(Vector3 coinPos)
+    {
+        GameObject[] guards = GameObject.FindGameObjectsWithTag("Guard1");
+        foreach(var guard in guards)
+        {
+            GuardAI guardScript = guard.GetComponent<GuardAI>();
+            guardScript.SomethingIsWrong(coinPos);
         }
     }
 }
