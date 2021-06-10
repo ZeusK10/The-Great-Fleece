@@ -6,12 +6,19 @@ public class VoiceOverTrigger : MonoBehaviour
 {
     [SerializeField]
     private AudioClip _clip;
+    private bool isActivated;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag=="Player")
         {
-            AudioSource.PlayClipAtPoint(_clip, Camera.main.transform.position);
+            if(isActivated==false)
+            {
+                isActivated = true;
+                AudioSource.PlayClipAtPoint(_clip, Camera.main.transform.position);
+
+            }
+            
         }
         
     }
