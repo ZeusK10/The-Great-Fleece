@@ -16,7 +16,6 @@ public class VoiceOverTrigger : MonoBehaviour
             {
                 isActivated = true;
                 AudioSource.PlayClipAtPoint(_clip, Camera.main.transform.position);
-
             }
             
         }
