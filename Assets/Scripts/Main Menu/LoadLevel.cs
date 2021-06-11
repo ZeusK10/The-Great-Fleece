@@ -15,14 +15,10 @@ public class LoadLevel : MonoBehaviour
     IEnumerator LoadLevelAsync()
     {
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Main");
-        //asyncOperation.allowSceneActivation = false;
         while(asyncOperation.isDone==false)
         {
             progressBar.fillAmount = asyncOperation.progress;
-            //if(asyncOperation.progress>=0.9f)
-            //{
-            //    asyncOperation.allowSceneActivation = true;
-            //}
+            
             yield return new WaitForEndOfFrame();
         }
     }

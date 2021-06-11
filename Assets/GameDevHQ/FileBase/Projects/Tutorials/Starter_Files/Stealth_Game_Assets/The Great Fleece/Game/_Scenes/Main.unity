@@ -16909,7 +16909,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 571269455}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37339150}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &571269455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19583,7 +19594,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 701461311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37339150}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &701461311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20105,7 +20127,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 715584007}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37339150}
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &715584007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45041,7 +45074,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1872499864}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37339150}
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1872499864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53960,8 +54004,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043896029}
-  m_LocalRotation: {x: -0.0048655956, y: -0.98112166, z: 0.025343833, w: -0.19166195}
-  m_LocalPosition: {x: -7.736763, y: 2.2657156, z: 34.00644}
+  m_LocalRotation: {x: 0.0038870194, y: 0.9927095, z: -0.11548552, w: 0.034289937}
+  m_LocalPosition: {x: -3.2545247, y: 6.5412493, z: 32.627014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
